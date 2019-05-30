@@ -58,7 +58,7 @@
   var scroll=0;
   // YOU KNOW THE FUNCTIONS
   function myFunction(){
-      
+
       scroll=document.getElementById("select-spiner").scrollTop;
 
       setTimeout(function(){
@@ -66,10 +66,10 @@
         //COLOR MANAGEMENT
         num=(scroll/40.3)+1;
         num=Math.trunc(num);
-        for(i=0;i<document.getElementsByClassName("numbers")[0].childElementCount;i++){
-          document.getElementsByClassName("numbers")[0].children[i].style.color="#C8A2ED";
-        }
-        document.getElementsByClassName("numbers")[0].children[num-1].style.color="white";
+        // for(i=0;i<document.getElementsByClassName("numbers")[0].childElementCount;i++){
+        //   document.getElementsByClassName("numbers")[0].children[i].style.color="#C8A2ED";
+        // }
+        // document.getElementsByClassName("numbers")[0].children[num-1].style.color="white";
 
         //PRINTS FOR MORE YOU KNOW
         console.log("Número:"+num);
