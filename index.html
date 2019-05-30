@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="spiner.css">
+  <title>Select box</title>
+</head>
+<body>
+
+
+<!-- THE HOUSE OF THE ELEMENT -->
+
+<div class="content-spiner">
+  <div class="arrows">
+    <img src="left.png" alt="">
+    <img src="right.png" alt="">
+  </div>
+  <div name="spiner" id="spiner">
+
+  <div class="numbers" id="select-spiner">
+    <span value="01">01</span>
+    <span value="02">02</span>
+    <span value="03">03</span>
+    <span value="04">04</span>
+    <span value="05">05</span>
+    <span value="06">06</span>
+    <span value="07">07</span>
+    <span value="08">08</span>
+    <span value="09">09</span>
+    <span value="10">10</span>
+    <span value="11">11</span>
+    <span value="12">12</span>
+    <span value="13">13</span>
+    <span value="14">14</span>
+    <span value="15">15</span>
+    <span value="16">16</span>
+    <span value="17">17</span>
+    <span value="18">18</span>
+    <span value="19">19</span>
+    <span value="20">20</span>
+  </div>
+  </div>
+
+</div>
+
+<!-- THE END OF THE ELEMENT -->
+
+
+<script type="text/javascript">
+
+  console.log("Holi -> rulotico .__.")
+  // SCROLL LISTENER
+  document.getElementById("select-spiner").addEventListener("scroll", myFunction);
+  // SOME VARS
+  var num=1;
+  var scroll=0;
+  // YOU KNOW THE FUNCTIONS
+  function myFunction(){
+      
+      scroll=document.getElementById("select-spiner").scrollTop;
+
+      setTimeout(function(){
+
+        //COLOR MANAGEMENT
+        num=(scroll/40.3)+1;
+        num=Math.trunc(num);
+        for(i=0;i<document.getElementsByClassName("numbers")[0].childElementCount;i++){
+          document.getElementsByClassName("numbers")[0].children[i].style.color="#C8A2ED";
+        }
+        document.getElementsByClassName("numbers")[0].children[num-1].style.color="white";
+
+        //PRINTS FOR MORE YOU KNOW
+        console.log("Número:"+num);
+        console.log("---------")
+      }, 500);
+
+  }
+
+</script>
+
+
+</body>
+</html>
