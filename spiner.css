@@ -30,6 +30,8 @@ overflow: hidden;
   overflow: auto;
       height: 250px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling-y: touch;
   color: #C8A2ED;
   font-family: helvetica;
   position: absolute;
